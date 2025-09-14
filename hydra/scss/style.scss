@@ -315,7 +315,7 @@ body {
 		left: 100%;
 		transition: left 0.5s;
 		overflow: auto;
-		padding: toRem(0) toRem(20) toRem(10) toRem(15); 
+		padding: toRem(20) toRem(20) toRem(10) toRem(15); 
 		background: rgba(48, 44, 66, 0.5);
 		.open-menu & {
 			left: 0;
@@ -1484,6 +1484,7 @@ body {
 }
 .footer {
 			position: relative;
+
 		// .footer__container
 
 		&__container {
@@ -1491,18 +1492,11 @@ body {
 			@include adaptiveValue("padding-bottom", 60, 90);
 			font-weight: 700;
 		}
-		&__bg {
-		position: absolute;
-		top: toRem(-200);
-		left: toRem(50);
-		height: 100%;
-		width: 100%;
-		object-fit: contain;
-		overflow: visible;
-		}
+	
 		// .footer__body
 
 		&__body {
+		
 			display: flex;
 			align-items: flex-start;
 			flex-wrap: wrap;
@@ -1511,7 +1505,15 @@ body {
 			position: relative;
 			@include adaptiveValue("padding-bottom", 70, 60);
 		}
-
+		&__bg {
+			position: absolute;
+			top: toRem(-220);
+			left: toRem(0);
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+			overflow: visible;
+			}
 		// .footer__column
 
 		&__column {
@@ -1681,91 +1683,152 @@ body {
 }
 // =====================================================
 
-.contact {
-		position: fixed;
-		overflow-x: hidden;
-		overflow-y: auto;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.6);
-		padding-inline: toRem(10);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 50;
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s ease;
-		// .contact__popup
-		&.active {
-			opacity: 1;
-			visibility: visible;
-		}
+// .contact {
+// 		position: fixed;
+// 		overflow-x: hidden;
+// 		overflow-y: auto;
+// 		top: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		background: rgba(0, 0, 0, 0.6);
+// 		padding-inline: toRem(10);
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		z-index: 50;
+// 		opacity: 0;
+// 		visibility: hidden;
+// 		transition: opacity 0.5s ease;
+// 		// .contact__popup
+// 		&.active {
+// 			opacity: 1;
+// 			visibility: visible;
+// 		}
 
-		// .contact__form
+// 		// .contact__form
 
-		&__form {
+// 		&__form {
+// 			display: flex;
+// 			flex-wrap: wrap;
+// 			gap: toRem(20);
+// 			justify-content: center;
+// 		}
+// }
+// .join {
+// 		position: fixed;
+// 		overflow-x: hidden;
+// 		overflow-y: auto;
+// 		top: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		background: rgba(0, 0, 0, 0.6);
+// 		padding-inline: toRem(10);
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		z-index: 50;
+// 		opacity: 0;
+// 		visibility: hidden;
+// 		transition: opacity 0.5s ease;
+// 		// .contact__popup
+// 		&.active {
+// 			opacity: 1;
+// 			visibility: visible;
+// 		}
+// 		// .join__form
+
+// 		&__form {
+// 			display: flex;
+// 			flex-wrap: wrap;
+// 			gap: toRem(10);
+// 			justify-content: center;
+// 			>* {
+
+// 			}
+// 		}
+// }
+// .popup {
+// 		background: #211E2E;
+// 		padding: toRem(30);
+// 		border-radius: toRem(12);
+// 		max-width: toRem(500);
+// 		box-shadow: 0 toRem(8) toRem(20) rgba(0,0,0,0.2);
+// 		position: relative;
+// }
+// .popup-close {
+// 	position: absolute;
+// 	line-height: 1;
+// 	top: toRem(10);
+// 	right: toRem(10);
+// 	font-size: toRem(20);
+// 	@media (any-hover: hover) and (any-pointer: fine) {
+// 				&:hover  {
+// 					color: #BAB1E2;
+// 					transition: color 0.4s;
+// 				}
+// 			}
+// }
+// =====================================================
+body.lock {
+   overflow: hidden;
+}
+
+.popup-overlay {
+	position: fixed;
+	top: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: toRem(15);
+   z-index: 50;
+	width: 100%;
+	height: 100%;
+   background: rgba(0,0,0,0.6);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0.6s ease;
+}
+
+.popup-overlay.active {
+   opacity: 1;
+   pointer-events: auto;
+}
+
+.popup {
+   background: #211E2E;
+   padding: toRem(30);
+   border-radius: 12px;
+   position: relative;
+   max-width: toRem(500);
+   width: 100%;
+   box-shadow: 0 toRem(8) toRem(20) rgba(0,0,0,0.2);
+   &__form {
 			display: flex;
 			flex-wrap: wrap;
 			gap: toRem(20);
 			justify-content: center;
 		}
 }
-.join {
-		position: fixed;
-		overflow-x: hidden;
-		overflow-y: auto;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.6);
-		padding-inline: toRem(10);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 50;
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s ease;
-		// .contact__popup
-		&.active {
-			opacity: 1;
-			visibility: visible;
-		}
-		// .join__form
 
-		&__form {
-			display: flex;
-			flex-wrap: wrap;
-			gap: toRem(10);
-			justify-content: center;
-			>* {
+.popup-overlay.active .popup {
+   transform: scale(1);
+}
 
-			}
-		}
-}
-.popup {
-		background: #211E2E;
-		padding: toRem(30);
-		border-radius: toRem(12);
-		max-width: toRem(500);
-		box-shadow: 0 toRem(8) toRem(20) rgba(0,0,0,0.2);
-		position: relative;
-}
 .popup-close {
-	position: absolute;
-	line-height: 1;
-	top: toRem(10);
-	right: toRem(10);
-	font-size: toRem(20);
-	@media (any-hover: hover) and (any-pointer: fine) {
+   position: absolute;
+   top: 10px;
+   right: 15px;
+   background: none;
+   border: none;
+   font-size: 20px;
+   @media (any-hover: hover) and (any-pointer: fine) {
 				&:hover  {
 					color: #BAB1E2;
 					transition: color 0.4s;
 				}
 			}
 }
-// =====================================================

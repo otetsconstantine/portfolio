@@ -29,8 +29,8 @@
                </div>
                   <div class="header__buttons buttons">
                      <div class="buttons__body">
-                     <button class="buttons__button button button--padding" id="openContact"><span>CONTACT US</span></button>
-                     <button class="buttons__button button button--padding" id="openJoin"><span>JOIN HYDRA</span></button>
+                     <button class="buttons__button button button--padding" data-popup-open="popupContact"><span>CONTACT US</span></button>
+                     <button class="buttons__button button button--padding" data-popup-open="popupJoin"><span>JOIN HYDRA</span></button>
                      </div>
                   </div>
                <button class="header__icon-menu icon-menu" aria-label="Menu" type="button"><span></span></button>
@@ -433,11 +433,10 @@
             </div>
          </div>
       </footer>
-   </div>
-   <div class="contact" id="popupContact">
-      <div class="contact__popup popup">
-      <button class="popup-close" id="closePopupContact">X</button>
-            <form method="POST" enctype="multipart/form-data" action="#" class="contact__form form">
+         <div class="popup-overlay" id="popupContact">
+      <div class="popup">
+      <button class="popup-close" data-popup-close>X</button>
+            <form method="POST" enctype="multipart/form-data" action="#" class="popup__form form">
                   <div class="form__email">
                      <input name="form[]" type="text" placeholder="Your Number or email" class="form__input form__input--smoll">
                   </div>
@@ -448,10 +447,10 @@
                </form>
       </div>
    </div>
-   <div class="join" id="popupJoin">
-      <div class="join__popup popup">
-      <button class="popup-close" id="closePopupJoin">X</button>
-            <form method="POST" enctype="multipart/form-data" action="#" class="join__form form">
+   <div class="popup-overlay" id="popupJoin">
+      <div class="popup">
+      <button class="popup-close" data-popup-close>X</button>
+            <form method="POST" enctype="multipart/form-data" action="#" class="popup__form form">
                   <div class="form__first-name">
                      <input name="form[]" required type="text" placeholder="First Name" class="form__input form__input--smoll">
                   </div>
@@ -475,6 +474,7 @@
                   </div>
                </form>
       </div>
+   </div>
    </div>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="./js/script.js" defer></script>

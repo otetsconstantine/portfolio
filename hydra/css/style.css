@@ -542,7 +542,7 @@ body.scroll-lock, body.lock {
     -webkit-transition: left 0.5s;
     transition: left 0.5s;
     overflow: auto;
-    padding: 0rem 1.25rem 0.625rem 0.9375rem;
+    padding: 1.25rem 1.25rem 0.625rem 0.9375rem;
     background: rgba(48, 44, 66, 0.5);
   }
   .menu::before {
@@ -2099,16 +2099,6 @@ body.scroll-lock, body.lock {
     padding-bottom: 90px;
   }
 }
-.footer__bg {
-  position: absolute;
-  top: -12.5rem;
-  left: 3.125rem;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  overflow: visible;
-}
 .footer__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2138,6 +2128,16 @@ body.scroll-lock, body.lock {
   .footer__body {
     padding-bottom: 60px;
   }
+}
+.footer__bg {
+  position: absolute;
+  top: -13.75rem;
+  left: 0rem;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: visible;
 }
 .footer__column {
   -webkit-box-flex: 1;
@@ -2333,16 +2333,20 @@ body.scroll-lock, body.lock {
     transition: opacity 0.4s;
   }
 }
-.contact {
+body.lock {
+  overflow: hidden;
+}
+
+.popup-overlay {
   position: fixed;
+  top: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  top: 0;
-  left: 0;
+  padding: 0.9375rem;
+  z-index: 50;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  padding-inline: 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2352,17 +2356,28 @@ body.scroll-lock, body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 50;
   opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  pointer-events: none;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
-.contact.active {
+
+.popup-overlay.active {
   opacity: 1;
-  visibility: visible;
+  pointer-events: auto;
 }
-.contact__form {
+
+.popup {
+  background: #211E2E;
+  padding: 1.875rem;
+  border-radius: 12px;
+  position: relative;
+  max-width: 31.25rem;
+  width: 100%;
+  -webkit-box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+.popup__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2374,62 +2389,19 @@ body.scroll-lock, body.lock {
           justify-content: center;
 }
 
-.join {
-  position: fixed;
-  overflow-x: hidden;
-  overflow-y: auto;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  padding-inline: 0.625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 50;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-.join.active {
-  opacity: 1;
-  visibility: visible;
-}
-.join__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 0.625rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.popup {
-  background: #211E2E;
-  padding: 1.875rem;
-  border-radius: 0.75rem;
-  max-width: 31.25rem;
-  -webkit-box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
-  position: relative;
+.popup-overlay.active .popup {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .popup-close {
   position: absolute;
-  line-height: 1;
-  top: 0.625rem;
-  right: 0.625rem;
-  font-size: 1.25rem;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
   .popup-close:hover {

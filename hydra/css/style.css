@@ -386,8 +386,8 @@ body.scroll-lock, body.lock {
   gap: 0.9375rem;
 }
 .logo__image {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 @media (min-width: 81.25em) {
   .logo__image {

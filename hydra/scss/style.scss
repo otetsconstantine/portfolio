@@ -144,7 +144,7 @@ body {
 			gap: toRem(10);
 		}
 		&__logo {
-			
+			// flex: 0 1 toRem(193);
 		}
 		&__menu {
 			flex-grow: 1;
@@ -171,10 +171,12 @@ body {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	justify-content: flex-end;
+	justify-content: center;
 	gap: toRem(10) toRem(34);
-	@media (max-width: toEm(820)){
+	@media (max-width: toEm($tablet)){
 		gap: toRem(10) toRem(10);
+			justify-content: flex-end;
+
 	}
 }
 .buttons__button {
@@ -193,8 +195,11 @@ body {
 		align-items: center;
 		gap: toRem(15);
       &__image {
-		flex-shrink: 1;
-		@include adaptiveValue("flex-basis", 102, 69);
+		flex-basis: toRem(102);
+		@media (max-width: toEm($tablet)){
+			flex-basis: toRem(69);
+		}
+		// @include adaptiveValue("flex-basis", 102, 69);
 		> img {
 			width: 100%;
 			height: 100%;
@@ -203,8 +208,11 @@ body {
 		}
 		}
 		&__name {
-		flex-shrink: 0;
-		@include adaptiveValue("flex-basis", 76, 46);
+		flex-basis: toRem(76);
+		@media (max-width: toEm($tablet)){
+			flex-basis: toRem(46);
+		}
+		// @include adaptiveValue("flex-basis", 76, 46);
 			> img{
 			width: 100%;
 			height: 100%;

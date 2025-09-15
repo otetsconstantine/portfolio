@@ -135,7 +135,6 @@ body {
 		text-transform: uppercase;
 		font-weight: 700;
 		&.active {
-			// backdrop-filter: blur(toRem(5));
 			background-color: #302C42;
 		}
 		&__container {
@@ -162,11 +161,6 @@ body {
 
 
 // =============================================
-.header__buttons {
-}
-.buttons {
-	
-}
 .buttons__body {
 	display: flex;
 	align-items: center;
@@ -178,12 +172,6 @@ body {
 		justify-content: flex-end;
 
 	}
-}
-.buttons__button {
-}
-.button {
-}
-.button--padding {
 }
 
 // =============================================
@@ -201,21 +189,23 @@ body {
 		}
 		// @include adaptiveValue("flex-basis", 102, 69);
 		> img {
+			aspect-ratio: 76 / 46;
 			width: 100%;
-			height: 100%;
+			height: auto;
 			object-fit: contain;
 			aspect-ratio: 102 / 103;
 		}
 		}
 		&__name {
 		flex-basis: toRem(76);
+		aspect-ratio: 76 / 46;
 		@media (max-width: toEm($tablet)){
 			flex-basis: toRem(46);
 		}
 		// @include adaptiveValue("flex-basis", 76, 46);
 			> img{
 			width: 100%;
-			height: 100%;
+			height: auto;
 			object-fit: contain;
 			aspect-ratio: 76 / 46;
 			}

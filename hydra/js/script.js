@@ -235,54 +235,52 @@ let scrollY;
 
 // Відкрити попап
 function openPopup(popup) {
-  scrollY = window.scrollY;
-  document.body.style.position = "fixed";
-  document.body.style.top = `-${scrollY}px`;
-  document.body.style.left = "0";
-  document.body.style.right = "0";
-  
+   scrollY = window.scrollY;
+   document.body.style.position = "fixed";
+   document.body.style.top = `-${scrollY}px`;
+   document.body.style.left = "0";
+   document.body.style.right = "0";
   // компенсуємо ширину скролбару
-  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
-  document.body.style.paddingRight = `${scrollBarWidth}px`;
+   const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+   document.body.style.paddingRight = `${scrollBarWidth}px`;
 
-  popup.classList.add("active");
+   popup.classList.add("active");
 }
 
 function closePopup(popup) {
-  popup.classList.remove("active");
-  
+   popup.classList.remove("active");
    if (!document.querySelector(".popup-overlay.active")) {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.paddingRight = "";
+   document.body.style.position = "";
+   document.body.style.top = "";
+   document.body.style.left = "";
+   document.body.style.right = "";
+   document.body.style.paddingRight = "";
 
-    window.scrollTo(0, scrollY);
+   window.scrollTo(0, scrollY);
 }
 }
 // Відкрити по кнопці з data-popup-open
 document.querySelectorAll("[data-popup-open]").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const targetId = btn.getAttribute("data-popup-open");
-    const popup = document.getElementById(targetId);
-    if (popup) openPopup(popup);
-  });
+   btn.addEventListener("click", () => {
+   const targetId = btn.getAttribute("data-popup-open");
+   const popup = document.getElementById(targetId);
+   if (popup) openPopup(popup);
+   });
 });
 
 // Закрити по кнопці з data-popup-close
 document.querySelectorAll("[data-popup-close]").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const popup = btn.closest(".popup-overlay");
-    closePopup(popup);
-  });
+   btn.addEventListener("click", () => {
+   const popup = btn.closest(".popup-overlay");
+   closePopup(popup);
+   });
 });
 
 // Закрити по кліку на фон
 document.querySelectorAll(".popup-overlay").forEach(popup => {
-  popup.addEventListener("click", e => {
-    if (e.target === popup) {
+   popup.addEventListener("click", e => {
+   if (e.target === popup) {
       closePopup(popup);
-    }
-  });
+   }
+   });
 });

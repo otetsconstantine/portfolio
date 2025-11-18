@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1763479149888"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1763479149888">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" class="header">
+				<div class="header__container">
+					<div class="header__logo logo-header">
+						<div class="logo-header__icon">
+							<picture>
+								<img alt="logo" src="./assets/img/logo.webp">
+							</picture>
+						</div>
+						<div class="logo-header__name">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/rebel-600.webp" type="image/webp">
+								<source media="(max-width: 1200px)" srcset="./assets/img/rebel-1200.webp" type="image/webp">
+								<img alt="logo" src="./assets/img/rebel.webp">
+							</picture>
+						</div>
+					</div>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#" class="menu__link menu__link--active">Home</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">About Us</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Package</a>
+									<button class="menu__button menu__button--icon-chevron"></button>
+									<ul class="menu__sub-list sub-list">
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link some link some link</a>
+										</li>
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link</a>
+										</li>
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Destination</a>
+									<button class="menu__button menu__button--icon-chevron"></button>
+									<ul class="menu__sub-list sub-list">
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link</a>
+										</li>
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link</a>
+										</li>
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Blog</a>
+									<button class="menu__button menu__button--icon-chevron"></button>
+									<ul data-fls-menu-open="" class="menu__sub-list sub-list">
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link</a>
+										</li>
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link</a>
+										</li>
+										<li class="sub-list__item">
+											<a class="sub-list__link" href="#">some link</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">Contacts</a>
+								</li>
+								<!--
+<li class="menu__item">
+<a href="#" class="menu__link menu__link--active">Home</a>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link">About Us</a>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link">Package</a>
+<button class="menu__button menu__button--icon-chevron"></button>
+<ul class="menu__sub-list sub-list">
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link some link some link</a></li>
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link</a></li>
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link</a></li>
+</ul>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link">Destination</a>
+<button class="menu__button menu__button--icon-chevron"></button>
+<ul class="menu__sub-list sub-list">
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link</a></li>
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link</a></li>
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link</a></li>
+</ul>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link">Blog</a>
+<button class="menu__button menu__button--icon-chevron"></button>
+<ul data-fls-menu-open class="menu__sub-list sub-list">
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link</a></li>
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link</a></li>
+<li class="sub-list__item"><a class="sub-list__link" href="#">some link</a></li>
+</ul>
+</li>
+<li class="menu__item">
+<a href="#" class="menu__link">Contacts</a>
+</li>
+-->
+							</ul>
+						</nav>
+					</div>
+					<!--
+<fetch url="@components/layout/menu/menu.json">
+<each loop='item in response'>
+</each>
+</fetch>
+-->
+					<form method="POST" enctype="multipart/form-data" action="#" class="header__form">
+						<input name="form[]" type="search" placeholder="Find a place to relax" class="header__input">
+						<button type="button" data-fls-button="" class="header__button button">Search</button>
+					</form>
+					<button type="button" data-fls-button="" class="button-search"></button>
+					<button type="button" data-fls-menu="" class="icon-menu">
+						<span></span>
+					</button>
+				</div>
+			</header>
+			<main class="page page--home">
+				<section class="page__hero hero">
+					<div class="hero__container">
+						<div class="hero__bg">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/home/hero_bg-600.webp" type="image/webp">
+								<source media="(max-width: 1200px)" srcset="./assets/img/home/hero_bg-1200.webp" type="image/webp">
+								<img class="hero__image" alt="Image" src="./assets/img/home/hero_bg.webp">
+							</picture>
+						</div>
+						<div class="hero__body">
+							<div data-fls-blockhead="" class="hero__block-head block-head">
+								<h2 class="block-head__title block-head__title--big">
+									Make in
+									<br>
+									your journey.
+								</h2>
+								<div class="block-head__text block-head__text--gray block-head__text--w440">
+									<p>Explore the world with what you love beautiful natural beauty.</p>
+								</div>
+							</div>
+							<form action="#" class="hero__filter filter">
+								<label class="filter__location">
+									<select data-fls-select="" name="form[]" data-fls-select-modif="form">
+										<option value="1" selected>Location</option>
+										<option value="2">Paris</option>
+										<option value="3">Swiss</option>
+										<option value="4">Thailand</option>
+										<option value="5">Taiwan</option>
+										<option value="6">Indonesi</option>
+										<option value="7">Singapore</option>
+										<option value="8">Bali</option>
+									</select>
+								</label>
+								<label class="filter__date filter__date--icon-shevron">
+									<!--
+-->
+									<input data-fls-datepicker="" autocomplete="off" type="" name="form[date]" data-error="Помилка" placeholder="Date" class="input-date">
+								</label>
+								<label class="filter__people">
+									<select data-fls-select="" name="form[]" data-fls-select-modif="form">
+										<option value="1" selected>People</option>
+										<option value="2">1 person</option>
+										<option value="3">2 person</option>
+										<option value="4">3 person</option>
+									</select>
+								</label>
+								<button data-fls-button="" class="filter__button button">Explore now</button>
+							</form>
+							<div class="hero__popular">
+								<p>
+									<span>Popular Place :</span>
+									Bali, Istanbul, Rome, Paris.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="pege__interesting interesting">
+					<div class="interesting__container">
+						<div data-fls-blockhead="" class="interesting__block-head block-head block-head--tac">
+							<h2 class="block-head__title block-head__title--mw">Explore new worlds with exotic natural scenery</h2>
+							<div class="block-head__text">
+								<p>Explore the world with what you love beautiful natural beauty.</p>
+							</div>
+						</div>
+						<div class="interesting__buttons">
+							<button data-fls-ripple="" data-fls-button="" class="interesting__button-prew button-prew"></button>
+							<button data-fls-ripple="" data-fls-button="" class="interesting__button-next button-next"></button>
+						</div>
+						<div class="interesting__content">
+							<div data-fls-slider="" class="interesting__slider slider-interesting swiper">
+								<div class="slider-interesting__wrapper swiper-wrapper">
+									<div class="slider-interesting__slide swiper-slide">
+										<article class="item-interesting">
+											<a href="#" class="item-interesting__picture">
+												<picture>
+													<source media="(max-width: 600px)" srcset="./assets/img/home/interesting/01-600.webp" type="image/webp">
+													<source media="(max-width: 1200px)" srcset="./assets/img/home/interesting/01-1200.webp" type="image/webp">
+													<img class="item-interesting__image" alt="Image" src="./assets/img/home/interesting/01.webp">
+												</picture>
+											</a>
+											<div class="item-interesting__info">
+												<span class="item-interesting__quote"></span>
+												<h3 class="item-interesting__title">
+													<a href="#" class="item-interesting__link">Toronto, Kanada.</a>
+												</h3>
+												<div class="item-interesting__text">
+													<p>
+														Bali is a beautiful tourist spot and is visited by many travelers. Bali is a beautiful tourist spot and is visited by many travelers.
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="slider-interesting__slide swiper-slide">
+										<article class="item-interesting">
+											<a href="#" class="item-interesting__picture">
+												<picture>
+													<source media="(max-width: 600px)" srcset="./assets/img/home/interesting/02-600.webp" type="image/webp">
+													<source media="(max-width: 1200px)" srcset="./assets/img/home/interesting/02-1200.webp" type="image/webp">
+													<img class="item-interesting__image" alt="Image" src="./assets/img/home/interesting/02.webp">
+												</picture>
+											</a>
+											<div class="item-interesting__info">
+												<span class="item-interesting__quote"></span>
+												<h3 class="item-interesting__title">
+													<a href="#" class="item-interesting__link">London, UK.</a>
+												</h3>
+												<div class="item-interesting__text">
+													<p>
+														Bali is a beautiful tourist spot and is visited by many travelers. Bali is a beautiful tourist spot and is visited by many travelers.
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="slider-interesting__slide swiper-slide">
+										<article class="item-interesting">
+											<a href="#" class="item-interesting__picture">
+												<picture>
+													<source media="(max-width: 600px)" srcset="./assets/img/home/interesting/03-600.webp" type="image/webp">
+													<source media="(max-width: 1200px)" srcset="./assets/img/home/interesting/03-1200.webp" type="image/webp">
+													<img class="item-interesting__image" alt="Image" src="./assets/img/home/interesting/03.webp">
+												</picture>
+											</a>
+											<div class="item-interesting__info">
+												<span class="item-interesting__quote"></span>
+												<h3 class="item-interesting__title">
+													<a href="#" class="item-interesting__link">Bali, Indonesia.</a>
+												</h3>
+												<div class="item-interesting__text">
+													<p>
+														Bali is a beautiful tourist spot and is visited by many travelers. Bali is a beautiful tourist spot and is visited by many travelers.
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="slider-interesting__slide swiper-slide">
+										<article class="item-interesting">
+											<a href="#" class="item-interesting__picture">
+												<img class="item-interesting__image" src="assets/img/home/interesting/04.png" alt="Image">
+											</a>
+											<div class="item-interesting__info">
+												<span class="item-interesting__quote"></span>
+												<h3 class="item-interesting__title">
+													<a href="#" class="item-interesting__link">New-York, USA.</a>
+												</h3>
+												<div class="item-interesting__text">
+													<p>
+														Bali is a beautiful tourist spot and is visited by many travelers. Bali is a beautiful tourist spot and is visited by many travelers.
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pege__why why">
+					<div class="why__container">
+						<picture>
+							<source media="(max-width: 600px)" srcset="./assets/img/home/why/why_bg-600.webp" type="image/webp">
+							<source media="(max-width: 1200px)" srcset="./assets/img/home/why/why_bg-1200.webp" type="image/webp">
+							<img class="why__bg" alt="Image" src="./assets/img/home/why/why_bg.webp">
+						</picture>
+						<div data-fls-blockhead="" class="why__block-head block-head block-head--tac">
+							<h2 class="block-head__title block-head__title--white">Why choose Us?</h2>
+							<div class="block-head__text block-head__text--white">
+								<p>our services have been trusted by world travelers.</p>
+							</div>
+						</div>
+						<div class="why__buttons">
+							<button data-fls-ripple="" data-fls-button="" class="why__button-prew button-prew"></button>
+							<button data-fls-ripple="" data-fls-button="" class="why__button-next button-next"></button>
+						</div>
+						<div class="why__content">
+							<div data-fls-slider="" class="why__slider slider-why swiper">
+								<div class="slider-why__wrapper swiper-wrapper">
+									<div class="slider-why__slide swiper-slide">
+										<article class="item-why">
+											<div class="item-why__picture">
+												<img class="item-why__image" src="./assets/img/home/why/01.svg" alt="Image">
+											</div>
+											<div class="item-why__info">
+												<h3 class="item-why__title">Best Service</h3>
+												<div class="item-why__text">
+													<p>our service is reliable and convenient, our service is quality.</p>
+												</div>
+												<a href="#" class="item-why__link why__link--icon-arrowr">Leaern more</a>
+											</div>
+										</article>
+									</div>
+									<div class="slider-why__slide swiper-slide">
+										<article class="item-why">
+											<div class="item-why__picture">
+												<img class="item-why__image" src="./assets/img/home/why/02.svg" alt="Image">
+											</div>
+											<div class="item-why__info">
+												<h3 class="item-why__title">Price Guarantee</h3>
+												<div class="item-why__text">
+													<p>our service is reliable and convenient, our service is quality.</p>
+												</div>
+												<a href="#" class="item-why__link why__link--icon-arrowr">Leaern more</a>
+											</div>
+										</article>
+									</div>
+									<div class="slider-why__slide swiper-slide">
+										<article class="item-why">
+											<div class="item-why__picture">
+												<img class="item-why__image" src="./assets/img/home/why/03.svg" alt="Image">
+											</div>
+											<div class="item-why__info">
+												<h3 class="item-why__title">Handpicked Hotels</h3>
+												<div class="item-why__text">
+													<p>our service is reliable and convenient, our service is quality.</p>
+												</div>
+												<a href="#" class="item-why__link why__link--icon-arrowr">Leaern more</a>
+											</div>
+										</article>
+									</div>
+									<div class="slider-why__slide swiper-slide">
+										<article class="item-why">
+											<div class="item-why__picture">
+												<img class="item-why__image" src="./assets/img/home/why/01.svg" alt="Image">
+											</div>
+											<div class="item-why__info">
+												<h3 class="item-why__title">Best Service</h3>
+												<div class="item-why__text">
+													<p>our service is reliable and convenient, our service is quality.</p>
+												</div>
+												<a href="#" class="item-why__link why__link--icon-arrowr">Leaern more</a>
+											</div>
+										</article>
+									</div>
+									<div class="slider-why__slide swiper-slide">
+										<article class="item-why">
+											<div class="item-why__picture">
+												<img class="item-why__image" src="./assets/img/home/why/01.svg" alt="Image">
+											</div>
+											<div class="item-why__info">
+												<h3 class="item-why__title">Best Service</h3>
+												<div class="item-why__text">
+													<p>our service is reliable and convenient, our service is quality.</p>
+												</div>
+												<a href="#" class="item-why__link why__link--icon-arrowr">Leaern more</a>
+											</div>
+										</article>
+									</div>
+									<div class="slider-why__slide swiper-slide">
+										<article class="item-why">
+											<div class="item-why__picture">
+												<img class="item-why__image" src="./assets/img/home/why/01.svg" alt="Image">
+											</div>
+											<h3 class="item-why__title">Best Service</h3>
+											<div class="item-why__text">
+												<p>our service is reliable and convenient, our service is quality.</p>
+											</div>
+											<a href="#" class="item-why__link why__link--icon-arrowr">Leaern more</a>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page__partners partners">
+					<div class="partners__container">
+						<div data-fls-blockhead="" class="partners__block-head block-head block-head--tac">
+							<h2 class="block-head__title">Our tour partner</h2>
+							<div class="block-head__text">
+								<p>
+									There are many variation of passage of lorem ipsum available but the majority have suffered alteration
+								</p>
+							</div>
+						</div>
+						<ul class="partners__list">
+							<li class="partners__item">
+								<a href="#" class="partners__link">
+									<img src="./assets/img/partners/Katana.svg" alt="Image">
+								</a>
+							</li>
+							<li class="partners__item">
+								<a href="#" class="partners__link">
+									<img src="./assets/img/partners/travava.svg" alt="Image">
+								</a>
+							</li>
+							<li class="partners__item">
+								<a href="#" class="partners__link">
+									<img src="./assets/img/partners/bigui.svg" alt="Image">
+								</a>
+							</li>
+							<li class="partners__item">
+								<a href="#" class="partners__link">
+									<img src="./assets/img/partners/Booking.com.svg" alt="Image">
+								</a>
+							</li>
+							<li class="partners__item">
+								<a href="#" class="partners__link">
+									<img src="./assets/img/partners/Jakmaen.svg" alt="Image">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="page__reviews reviews">
+					<div class="reviews__container">
+						<div data-fls-blockhead="" class="reviews__block-head block-head">
+							<span class="block-head__lable">TESTIMONIAL</span>
+							<h2 class="block-head__title">What our client say</h2>
+							<div class="block-head__text block-head__text--lhl">
+								<p>
+									Create  a visual identity for your company and a
+									<br>
+									overall brand
+								</p>
+							</div>
+						</div>
+						<div class="reviews__buttons">
+							<button data-fls-ripple="" data-fls-button="" class="reviews__button-prew button-prew"></button>
+							<button data-fls-ripple="" data-fls-button="" class="reviews__button-next button-next"></button>
+						</div>
+						<div data-fls-slider="" class="reviews__slider slider-reviews swiper">
+							<div class="slider-reviews__wrapper swiper-wrapper">
+								<div class="slider-reviews__slide swiper-slide">
+									<article class="item-reviews">
+										<a href="#" class="item-reviews__picture">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/home/reviews/01-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/home/reviews/01-1200.webp" type="image/webp">
+												<img class="item-reviews__image" alt="Image" src="./assets/img/home/reviews/01.webp">
+											</picture>
+										</a>
+										<div class="item-reviews__info">
+											<div class="item-reviews__head">
+												<h3 class="item-reviews__title">
+													<a href="#" class="item-reviews__link">Sara Jay</a>
+												</h3>
+												<h4 class="item-reviews__sub-title">Treveller</h4>
+											</div>
+											<div data-fls-rating="" data-fls-rating-value="5" class="item-reviews__rating rating"></div>
+											<div class="item-reviews__text">
+												<p>
+													Before we define any approach, we need to deline the brands overall goal. We  then need to dive.
+												</p>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="slider-reviews__slide swiper-slide">
+									<article class="item-reviews">
+										<a href="#" class="item-reviews__picture">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/home/reviews/02-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/home/reviews/02-1200.webp" type="image/webp">
+												<img class="item-reviews__image" alt="Image" src="./assets/img/home/reviews/02.webp">
+											</picture>
+										</a>
+										<div class="item-reviews__info">
+											<div class="item-reviews__head">
+												<h3 class="item-reviews__title">
+													<a href="#" class="item-reviews__link">Cristian Daniel</a>
+												</h3>
+												<h4 class="item-reviews__sub-title">Treveller</h4>
+											</div>
+											<div data-fls-rating="" data-fls-rating-value="5" class="item-reviews__rating rating"></div>
+											<div class="item-reviews__text">
+												<p>
+													Before we define any approach, we need to deline the brands overall goal. We  then need to dive.
+												</p>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="slider-reviews__slide swiper-slide">
+									<article class="item-reviews">
+										<a href="#" class="item-reviews__picture">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/home/reviews/03-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/home/reviews/03-1200.webp" type="image/webp">
+												<img class="item-reviews__image" alt="Image" src="./assets/img/home/reviews/03.webp">
+											</picture>
+										</a>
+										<div class="item-reviews__info">
+											<div class="item-reviews__head">
+												<h3 class="item-reviews__title">
+													<a href="#" class="item-reviews__link">Kausar Hasan</a>
+												</h3>
+												<h4 class="item-reviews__sub-title">Treveller</h4>
+											</div>
+											<div data-fls-rating="" data-fls-rating-value="5" class="item-reviews__rating rating"></div>
+											<div class="item-reviews__text">
+												<p>
+													Before we define any approach, we need to deline the brands overall goal. We  then need to dive. Before we define any approach, we need to deline the brands overall goal. We  then need to dive.
+												</p>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="slider-reviews__slide swiper-slide">
+									<article class="item-reviews">
+										<a href="#" class="item-reviews__picture">
+											<picture>
+												<source media="(max-width: 600px)" srcset="./assets/img/home/reviews/01-600.webp" type="image/webp">
+												<source media="(max-width: 1200px)" srcset="./assets/img/home/reviews/01-1200.webp" type="image/webp">
+												<img class="item-reviews__image" alt="Image" src="./assets/img/home/reviews/01.webp">
+											</picture>
+										</a>
+										<div class="item-reviews__info">
+											<div class="item-reviews__head">
+												<h3 class="item-reviews__title">
+													<a href="#" class="item-reviews__link">Sara Jay</a>
+												</h3>
+												<h4 class="item-reviews__sub-title">Treveller</h4>
+											</div>
+											<div data-fls-rating="" data-fls-rating-value="5" class="item-reviews__rating rating"></div>
+											<div class="item-reviews__text">
+												<p>
+													Before we define any approach, we need to deline the brands overall goal. We  then need to dive.
+												</p>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<aside data-fls-aside="" class="subscribe">
+				<div class="subscribe__container">
+					<picture>
+						<source media="(max-width: 600px)" srcset="./assets/img/subscribe_bg-600.webp" type="image/webp">
+						<source media="(max-width: 1200px)" srcset="./assets/img/subscribe_bg-1200.webp" type="image/webp">
+						<img class="subscribe__bg" alt="Image" src="./assets/img/subscribe_bg.webp">
+					</picture>
+					<div data-fls-blockhead="" class="subscribe__block-head block-head block-head--tac">
+						<h2 class="block-head__title block-head__title--white">Subcribe to get special price</h2>
+						<div class="block-head__text block-head__text--white">
+							<p>
+								Dont wanna miss something? subscribe right now and get special promotion and monthly newsletter
+							</p>
+						</div>
+					</div>
+					<form method="POST" enctype="multipart/form-data" action="#" class="subscribe__form">
+						<input name="form[]" type="email" placeholder="Type your email here" class="subscribe__input">
+						<button type="button" data-fls-button="" class="subscribe__button button">Subscribe</button>
+					</form>
+				</div>
+			</aside>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container">
+					<div class="footer__content">
+						<picture>
+							<img alt="Image" src="./assets/img/logofooter.webp">
+						</picture>
+						<div class="footer__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra condimentum.
+							</p>
+						</div>
+					</div>
+					<div class="footer__contacts contacts-footer">
+						<h3 class="contacts-footer__title">Contact Information</h3>
+						<ul class="contacts-footer__list">
+							<li class="contacts-footer__item">
+								<a href="#" class="contacts-footer__link contacts-footer__link--icon-location">732 Despard St, Atlanta</a>
+							</li>
+							<li class="contacts-footer__item">
+								<a href="#" class="contacts-footer__link contacts-footer__link--icon-mail">+97 888 8888</a>
+							</li>
+							<li class="contacts-footer__item">
+								<a href="#" class="contacts-footer__link contacts-footer__link--icon-phone">info@traveller.com</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__menu menu-footer">
+						<h3 class="menu-footer__title">Quick Link</h3>
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Home</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">About Us</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Tours</a>
+							</li>
+							<li class="menu-footer__item">
+								<a href="#" class="menu-footer__link">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__socials socials-footer">
+						<h3 class="socials-footer__title">Follow Us</h3>
+						<ul class="socials-footer__list">
+							<li class="socials-footer__item">
+								<a href="#" class="socials-footer__link facebook socials-footer__link--icon-facebook"></a>
+							</li>
+							<li class="socials-footer__item">
+								<a href="#" class="socials-footer__link twitter socials-footer__link--icon-twitter"></a>
+							</li>
+							<li class="socials-footer__item">
+								<a href="#" class="socials-footer__link youtube socials-footer__link--icon-youtube"></a>
+							</li>
+							<li class="socials-footer__item">
+								<a href="#" class="socials-footer__link instagram socials-footer__link--icon-instagram"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__copyright">
+					<p>Copyright © All rights reserved (Website Developed & Managed by creativechroma)</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
